@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자</title>
+    <style>
+        /* 일치 */
+        a[href="http:/www.paullab.co.kr"]{
+            font-size: 48px;
+        }
+        /* ~= 동일한 단어 포함 */
+        a[href~="paul"]{
+            font-weight: normal;
+        }
+        /* *= 동일한 글자 포함 */
+        a[href*="paul"]{
+            font-weight: bold;
+        }
+        /* $= 해당 단어로 끝나는 것 */
+        a[href$=".pdf"]{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">클릭해!</a>
+    <a href="http:/www.paullab.co.kr">클릭해!</a>
+    <a href="abcd.pdf">클릭해!</a>
+</body>
+</html>

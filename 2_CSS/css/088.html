@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover, active, focus</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: all 2s;
+        }
+
+        div:hover{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        /* transform 다양한 속성 */
+        .one:hover{
+            transform: translate(50px, 50px);
+        }
+
+        .two:hover{
+            transform: rotate(180deg);
+        }
+
+        .three:hover{
+            transform: skew(30deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+</body>
+</html>

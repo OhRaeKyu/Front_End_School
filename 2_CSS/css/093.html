@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        @keyframes move {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -8192px 0;
+            }
+        }
+
+        .building {
+            width: 195px;
+            height: 290px;
+            background-image: url("./building/frame_paullab.png");
+            animation: move 3s steps(42) infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="building"></div>
+</body>
+</html>

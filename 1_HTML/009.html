@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <!-- form : 다양한 데이터 전송 형식 -->
+    <form action="./009.html" method="get">
+        <!-- label : 요소에 제목을 지정할 때 사용 -->
+        <label for="one">아이디 : </label>
+        <input type="text" name="id" id="one">
+        <label for="two">패스워드 : </label>
+        <input type="password" name="pw" id="two">
+
+        <button type="submit">로그인</button><br>
+
+        <input type="date"><br>
+        <input type="time"><br>
+        <input type="range"><br>
+        <input type="color"><br>
+        <input type="radio"><br>
+        <input type="checkbox"><br>
+        <input type="file"><br>
+        <textarea name="name" rows="8" cols="80"></textarea>
+    </form>
+
+    <form action="./009.html" method="get">
+        <!-- select > option : 선택 옵션-->
+        <select name="dvice" id="myDevice">
+                <option value="iphone">아이폰</option>
+                <option value="galaxy">갤럭시</option>
+                <option value="lg">LG폰</option>
+        </select>
+        <button type="submit">선택</button>
+    </form>
+</body>
+</html>

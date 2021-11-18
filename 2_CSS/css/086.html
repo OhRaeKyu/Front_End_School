@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover, active, focus</title>
+    <style>
+        .one{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: all 2s;
+        }
+
+        .one:hover{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        .btn {
+            border: 4px solid pink;
+            border-radius: 4px;
+            padding: 30px 60px;
+            background: none;
+            color: pink;
+            font-size: 32px;
+            transition: all 1s;
+        }
+
+        .btn:active{
+            background-color: purple;
+            color: white;
+        }
+
+        .box:focus{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <input type="text" class="box" placeholder="click here!" name="" id="">
+    <button class="btn">Click Me!!</button>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .box1{
+            position: static;
+            background-color: green;
+            color: white;
+            width: 100px;
+            height: 100px;
+        }
+        .standard{
+            position: relative;
+        }
+        .box2{
+            position: relative;
+            left: 40px;
+            top: 40px;
+            background-color: red;
+            color: white;
+            width: 100px;
+            height: 100px;
+            z-index: 2;
+        }
+        .box3{
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            background-color: blue;
+            color: white;
+            width: 100px;
+            height: 100px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="standard">
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+</body>
+</html>

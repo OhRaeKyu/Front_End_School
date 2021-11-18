@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text slide</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        /* animation */
+        @keyframes move {
+            0% {
+                transform: translateY(0);
+            }
+
+            20% {
+                transform: translateY(-100px);
+            }
+
+            40% {
+                transform: translateY(-200px);
+            }
+
+            60% {
+                transform: translateY(-300px);
+            }
+
+            80% {
+                transform: translateY(-400px);
+            }
+
+            100% {
+                transform: translateY(-500px);
+            }
+        }
+        
+        body {
+            background-color: #000000;
+        }
+        
+        .name {
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .name-job {
+            position: relative;
+            height: 100px;
+            line-height: 100px;
+            overflow: hidden;
+        }
+
+        .name-job::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            box-shadow: inset 0 0 10px 10px #000000;
+        }
+        
+        .name-job-list{
+            animation: move 4s infinite reverse;
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        <p>I'm a</p>
+        <div class="name-job">
+            <ul class="name-job-list">
+                <li>Front-End</li>
+                <li>Back-End</li>
+                <li>Full Stack</li>
+                <li>Cloud</li>
+                <li>Embedded</li>
+                <li>Front-End</li>
+            </ul>
+        </div>
+        <p>Developer</p>
+    </div>
+</body>
+</html>

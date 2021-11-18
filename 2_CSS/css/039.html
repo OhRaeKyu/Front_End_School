@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가변 크기 단위</title>
+    <style>
+        .one{
+            /* % 단위는 부모가 갖은 크기를 기준의 비율 */
+            width: 50%;
+            height: 200px;
+            background-color: darkblue;
+        }
+        .two{
+            height: 100px;
+            width: 50%;
+            background-color: red;
+        }
+        .three{
+            height: 100px;
+            width: 50vw;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- em, %, rem, vw, vh, -->
+    <div class="one">
+        <div class="two">
+        </div>
+    </div>
+    <div class="one">
+        <div class="three">
+        </div>
+    </div>
+</body>
+</html>

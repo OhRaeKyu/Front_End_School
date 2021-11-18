@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex align-items</title>
+    <style>
+        body, ul, li{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            display: flex;
+            height: 100vh;
+            /* 자동 줄바꿈 */
+            flex-wrap: wrap-reverse;
+
+            /* align-items 속성*/
+            /* align-items: stretch; */
+            /* align-items: center; */
+            /* align-items: flex-start; */
+            align-items: flex-end;
+        }
+
+        li{
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border: 1px solid black;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="container">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+    </ul>
+</body>
+</html>
