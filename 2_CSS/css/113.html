@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
+    <title>modules</title>
+    <style>
+        /* CSS Sprite */
+        .link-sns-login {
+            display: block;
+            box-sizing: border-box;
+            padding: 15px 0 16px;
+            font-weight: 500;
+            line-height: 20px;
+            text-decoration: none;
+            text-align: center;
+            border: 1px solid #767676;
+            border-radius: 5px;
+            color: #767676;
+            text-indent: -38px;
+        }
+        
+        .link-sns-login::before {
+            display: block;
+            content: "";
+            float: left;
+            margin-left: 16px;
+            width: 22px;
+            height: 22px;
+            background-image: url("./img/css_sprites.png");
+        }
+        
+        .icon-google::before {
+            background-position: -10px -10px;
+        }
+        
+        .link-sns-login.icon-facebook {
+            border-color: #2D9CDB;
+        }
+        
+        .icon-facebook::before {
+            height: 24px;
+            background-position: -90px -10px;
+        }
+        
+        .link-sns-login.icon-naver {
+            border-color: #00BF18;
+        }
+        
+        .icon-naver::before {
+            background-position: -10px -52px;
+        }
+        
+        .link-sns-login.icon-kakao {
+            border-color: #F2C94C;
+        }
+        
+        .icon-kakao::before {
+            background-position: -52px -10px;
+        }
+        </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" class="icon-google link-sns-login">구글 계정으로 로그인</a></li>
+        <li><a href="#" class="icon-facebook link-sns-login">페이스북 계정으로 로그인</a></li>
+        <li><a href="#" class="icon-naver link-sns-login">네이버 계정으로 로그인</a></li>
+        <li><a href="#" class="icon-kakao link-sns-login">카카오 계정으로 로그인</a></li>
+    </ul>
+</body>
+</html>
