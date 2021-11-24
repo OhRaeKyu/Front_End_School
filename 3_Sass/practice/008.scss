@@ -1,0 +1,14 @@
+// maps - key를 이용하여 value 리턴
+$font-weight: ("regular": 400, "medium": 500, "bold": 700);
+$font-size: ("h1": 45px, "h2": 19px, "p": 16px);
+
+div {
+    font-weight: map-get($font-weight,"bold");
+}
+
+section {
+    h2 {
+        // 해당되는 key가 존재하지 않으면 css 생성하지 않음
+        font-size: map-get($font-size, "h3");
+    }
+}

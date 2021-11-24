@@ -1,0 +1,11 @@
+// & 앰퍼샌드
+// "&"는 상위에 있는 부모선택자를 가리킵니다.
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transition: all .3s;
+    &:hover {
+        background-color: pink;
+    }
+}

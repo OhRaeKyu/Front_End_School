@@ -1,0 +1,12 @@
+// & 앰퍼샌드 사용 예
+ul {
+    li {
+        &:hover {
+            background-color: white;
+            cursor: pointer;
+        }
+        &:last-child {
+            border-bottom: 2px solid black;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+// 한줄 주석 : 컴파일 시 사라짐
+/* 여러줄 주석 */
+
+// 중첩 (Nesting)
+// 상속 관계
+ul {
+    li {
+        color: red;
+        font-size: 20px;
+    }
+}
+
+.one {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    .two {
+        color: green;
+        .three {
+            font-size: 20px;
+        }
+        .four {
+            font-size: 40px;
+        }
+    }
+}
