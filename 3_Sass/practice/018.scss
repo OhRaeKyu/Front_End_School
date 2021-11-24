@@ -1,0 +1,22 @@
+@mixin font($x:10, $y:3) {
+    font-size: $x * $y + px;
+}
+
+// default
+.one {
+    @include font;
+}
+
+// x 값만 전달
+.two {
+    @include font(20);
+}
+
+// y 값만 전달
+.four {
+    @include font($y:5);
+}
+
+.three {
+    @include font(3, 3);
+}
