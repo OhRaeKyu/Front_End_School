@@ -1,0 +1,11 @@
+// while문
+@function scale-below($value, $base, $ratio: 1.618) {
+    @while $value > $base {
+      $value: ($value/$ratio);
+    }
+    @return $value;
+  }
+  
+  .sup {
+    font-size: scale-below(20px, 4px, 2);
+  }

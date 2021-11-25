@@ -1,0 +1,16 @@
+// 반복문 - @for
+@for $i from 1 through 5 {
+    .photo-box:nth-child(#{$i}) {
+        background-image: url("../assets/phoster#{$i}.png");
+    }
+}
+
+// 반복문의 변수 활용
+@for $i from 1 through 10 {
+    .content-#{$i} {
+        font-size: #{$i*10}px;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+}
