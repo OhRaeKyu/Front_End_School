@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
+    <title>반응형 동영상</title>
+    <style>
+        video {
+            width: 100%;
+        }
+
+        div {
+            position: relative;
+            padding-top: 56.25%;
+        } 
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <video poster="../../../poster_ex.jpeg" preload="none" controls src="../../../video_ex.mp4"></video> -->
+    <!-- <video poster="../../../poster_ex.jpeg" autoplay muted controls loop src="../../../video_ex.mp4"></video> -->
+    <div>
+        <iframe width="950" height="534" src="https://www.youtube.com/embed/WPdWvnAAurg?autoplay=1&muted=1&controls=1&loop=1&playlist=WPdWvnAAurg" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+</body>
+</html>

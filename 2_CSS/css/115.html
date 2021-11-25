@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
+    <title>반응형 이미지</title>
+    <style>
+        /* 반응형 이미지 */
+        img {
+            /* viewport 기준 100% */
+            /* width: 100%; */
+            /* 원본 이미지 기준 100% */
+            max-width: 100%;
+        }
+
+        /* 반응형 백그라운드 이미지 */
+        div {
+            width: 100vw;
+            height: 100vh;
+            /* 컨테이너의 width의 50%를 차지하고 비율을 유지하며 height를 auto 설정 */
+            /* background: url("./img/example.jpg") 0/50% auto no-repeat; */
+            /* 컨테이너 전체를 덮지만 이미지를 자르지 않게 유지. */
+            /* background: url("./img/example.jpg") 0/contain no-repeat; */
+            /* 컨테이너 전체를 덮고 이미지가 잘림 */
+            background: url("./img/example.jpg") center center/cover no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="./img/example.jpg" alt=""> -->
+    <div></div>
+</body>
+</html>
