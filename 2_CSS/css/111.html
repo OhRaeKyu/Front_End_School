@@ -5,17 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../reset.css">
-    <title>custom</title>
+    <title>select custom</title>
     <style>
-        /* 직접 셀렉트 박스 만들기 */
-        h2 {
-            margin: 30px;
-        }
-
         .btn-select {
             width: 200px;
             height: 30px;
-            background: purple;
+            background: hotpink;
             color: #fff;
         }
 
@@ -29,7 +24,7 @@
             display: block;
         }
 
-        .btn-select:active+.list-member {
+        .btn-select:active + .list-member {
             display: block;
         }
 
@@ -53,13 +48,12 @@
     </style>
 </head>
 <body>
-    <h2>셀렉트 박스 만들기</h2>
-    <button class="btn-select">당신의 에스파 최애 맴버는??</button>
+    <button class="btn-select">당신이 생각하는 최고의 운동은?</button>
     <ul class="list-member">
-        <li><button type="button">카리나</button></li>
-        <li><button type="button">지젤</button></li>
-        <li><button type="button">닝닝</button></li>
-        <li><button type="button">윈터</button></li>
+        <li><button type="button">데드리프트</button></li>
+        <li><button type="button">벤치프레스</button></li>
+        <li><button type="button">스쿼트</button></li>
+        <li><button type="button">숄더프레스</button></li>
     </ul>
     
     <script>
