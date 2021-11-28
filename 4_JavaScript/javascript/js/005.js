@@ -3,9 +3,12 @@ let n = 10000;
 let nFloat = 10000.123123123;
 let s = '10,000,000';
 
+// 문장 내 호출 ${변수명}
 document.write(`n : ${n} <br>`);
+// number를 string으로
 document.write(`n.toLocaleString() : ${n.toLocaleString()} <br>`);
 document.write(`s : ${s} <br>`);
+// string을 number로
 document.write(`s.replace(/,/g, '') : ${s.replace(/,/g, '')} <br>`);
 document.write(`parseInt(s, 10) : ${parseInt(s, 10)} <br>`);
 
