@@ -30,7 +30,7 @@ for (let i = 1; i < 10; i++){
 // // 예를들어 S={1, 3, 4, 8, 13, 17, 20} 이 주어졌다면, 결과값은 (3, 4)가 될 것이다.
 
 // let arrS = [1, 3, 4, 8, 13, 17, 20];
-// let sub = 9999;
+// let sub = arrS[1] - arrS[0];
 // let j = 0;
 
 // for (let i = 1; i < arrS.length; i++){
@@ -39,6 +39,20 @@ for (let i = 1; i < 10; i++){
 //         j = i;
 //     }
 // }
-
 // console.log(arrS[j-1], arrS[j]);
 
+// // 1부터 10000 사이에 존재하는 8의 갯수
+// let strS = "";
+// let cnt = 0;
+
+// for (let i = 1; i <= 10000; i++) {
+//     strS += i;
+// }
+
+// for (let i = 0; i < strS.length; i++) {
+//     if (strS[i] == 8){
+//         cnt += 1;
+//     }
+// }
+
+// console.log(cnt);
