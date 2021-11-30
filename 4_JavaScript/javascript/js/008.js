@@ -1,8 +1,36 @@
 let cars = ["BMW", "Volvo", "Saab", "Ford", "Flat", "Audi"];
 
 for (let i = 0; i < cars.length; i++){
-    console.log(cars[i]);
+    console.log(`자동차 배열: ${cars[i]}`);
 }
+
+// for 문의 다른 형태
+let array = [10, 20, 30, 40, 50];
+let i = 0;;
+
+for (;i<array.length;) {
+    document.write(array[i], "<br>");
+    i++;
+}
+
+document.write("<br>");
+
+// array.forEach(e => console.log(e*3));
+
+// for in 문
+for (let index in array) {
+    document.write(index, "<br>");
+    // document.write(array[index], "<br>");
+}
+
+document.write("<br>");
+
+// for of 문
+let sum = 0;
+for (let variable of array) {
+  sum += variable;
+}
+document.write(sum/array.length);
 
 // 예제
 // 모든 수의 합
