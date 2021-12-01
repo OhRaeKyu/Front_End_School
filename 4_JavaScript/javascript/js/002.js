@@ -9,6 +9,7 @@ document.write("myVal2:", myVal2);
 document.write("<br>")
 
 // array
+// lists
 var myVal3 = [1, 2, 3, 4, 5, 6];
 document.write("myVal3:", myVal3);
 document.write("<br>")
@@ -19,6 +20,7 @@ document.write("<br>")
 document.write("myVal3[5]:", myVal3[5]);
 document.write("<br>")
 
+// objects
 var myVal4 = {val1: 1, val2: 2};
 document.write("myVal4:", myVal4);
 document.write("<br>")
