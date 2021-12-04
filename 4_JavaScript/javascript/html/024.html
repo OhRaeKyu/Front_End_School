@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../reset.css">
+    <title>js DOM</title>
+</head>
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    h1 {
+        margin: 30px 0;
+    }
+
+    div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: black;
+        transition: all 1s;
+        margin: 30px 0;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 20%;
+    }
+
+    button {
+        background-color: inherit;
+    }
+    
+    .red {
+        background-color: red;
+    }
+    
+    .blue {
+        background-color: blue;
+    }
+
+    .yellow {
+        background-color: yellow;
+    }
+</style>
+<body>
+    <section>
+        <h1>DOM 예제 - class 다루기</h1>
+        <div></div>
+        <ul>
+            <li><button class="redBtn">붉은색</button></li>
+            <li><button class="blueBtn">푸른색</button></li>
+            <li><button class="yellowBtn">노란색</button></li>
+        </ul>
+    </section>
+    
+    <script src="../js/024.js"></script>    
+</body>
+</html>

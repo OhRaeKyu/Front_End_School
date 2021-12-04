@@ -1,5 +1,5 @@
 //숫자형 (Number)
-var num = 10;
+let num = 10;
 
 document.write(num, '<br>');  // 10
 document.write(num/3, '<br>');  // 3.3333..
