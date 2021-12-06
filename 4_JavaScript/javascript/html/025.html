@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../reset.css">
+    <title></title>
+</head>
+<body>
+    <button onclick="renderTable(data)">데이터 호출!</button>
+    <table>
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>index</td>
+                <td>picture</td>
+                <td>age</td>
+                <td>eyeColor</td>
+                <td>name</td>
+                <td>gender</td>
+                <td>company</td>
+                <td>email</td>
+                <td>phone</td>
+                <td>address</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="../js/025.js"></script>
+    <script>
+        function renderTable(data) {
+            let tbodyData = [];
+            for (const iterator of data) {
+                // console.log(iterator);
+                tbodyData.push(`
+                    <tr>
+                        <td>id</td>
+                        <td>index</td>
+                        <td>picture</td>
+                        <td>age</td>
+                        <td>eyeColor</td>
+                        <td>name</td>
+                        <td>gender</td>
+                        <td>company</td>
+                        <td>email</td>
+                        <td>phone</td>
+                        <td>address</td>
+                    </tr>
+                `);
+            }
+        }
+    </script>
+</body>
+</html>
