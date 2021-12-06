@@ -11,6 +11,7 @@
 <body>
     <!-- 실무에서는 onclick을 인라인으로 사용하지 않음. -->
     <button onclick="renderTable(data)">데이터 호출!</button>
+    <button onclick="averageAge(data)">나이 평균 콘솔 출력</button>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
@@ -69,7 +70,7 @@
                         return 0;
                     }
                 });
-                howSort = "ASC";
+                clicked = false;
             }
 
             else {
@@ -84,9 +85,22 @@
                         return 0;
                     }
                 });
-                howSort = "DESC";
+                clicked = true;
             }
             renderTable(data);
+        }
+
+        function averageAge(data) {
+            let male = data.filter(i => i.gender === "male").map(i => i.age);
+            let female = data.filter(i => i.gender === "female").map(i => i.age);
+            let sumMale = 0;
+            let sumFemale = 0;
+
+            male.forEach(i => sumMale += i);
+            female.forEach(i => sumFemale += i);
+
+            console.log(sumMale / male.length);
+            console.log(sumFemale / female.length);
         }
     </script>
 </body>
