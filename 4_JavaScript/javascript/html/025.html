@@ -54,10 +54,10 @@
             document.querySelector(".table > tbody").innerHTML = tbodyData.join("")
         }
 
-        let howSort = "";
+        let clicked = true;
 
         function wantSort(data, want) {
-            if (howSort != "ASC"){
+            if (clicked == true){
                 data.sort(function (a, b) {
                     if (a[want] > b[want]) {
                         return 1;
@@ -71,7 +71,7 @@
                 });
                 howSort = "ASC";
             }
-            
+
             else {
                 data.sort(function (a, b) {
                     if (a[want] < b[want]) {
