@@ -1,3 +1,4 @@
+// 콜백 지옥 예시,,, 안 좋은 코드
 class GetUserData {
     login(inputId, inputPw, loginSuccess, loginFailure) {
         const data = userDB.find(user => (user.id === inputId) && (user.pw === inputPw));
@@ -29,4 +30,19 @@ class GetUserData {
 const userData = new GetUserData();
 const id = "dhforb";
 const pw = "1234";
-userData.login(id, pw, () => {}, () => {})
+userData.login(id, pw,
+    (userId) => {
+        userData.getUserDataSet(
+            userId,
+            (userBasicInfo) => {
+                console.log(userBasicInfo);
+            },
+            (loginFailure) => {
+                console.log(loginFailure);
+            }
+        )
+    },
+    (loginFailure) => {
+        console.log(loginFailure);
+    }
+);
