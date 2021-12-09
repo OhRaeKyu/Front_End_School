@@ -14,9 +14,11 @@ try {
 // try catch finally : 에러 발생 처리문
 try {
     console.log("try 블록 시작");
-    if (confirm("에러를 만드시겠습니까?")) 이상한_코드();
+    if (confirm("에러를 만드시겠습니까?")) {
+      이상한_코드();
+    } 
 } catch (e) {
     console.log("catch");
 } finally {
-    console.log("finally");
+    console.log("finally"); // 에러가 발생하여도 무조건 실행
 }
