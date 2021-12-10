@@ -18,22 +18,26 @@
         }
 
         .btn-select {
-            width: 100%;
-            padding: 13px 14px;
-            color: #000;
-            font-size: 12px;
-            line-height: 14px;
-            text-align: left;
-            border: 1px solid #C4C4C4;
             box-sizing: border-box;
+            width: 200px;
+            height: 40px;
+            padding: 0 14px;
+            border: 1px solid #C4C4C4;
             border-radius: 10px;
+            background-color: #FFFFFF;
+            text-align: left;
             cursor: pointer;
-            background: url("images/icon-Triangle-down.png") right 13px center no-repeat;
+        }
 
-            /* 말줄임 추가 */
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
+        .btn-select::after {
+            display: block;
+            float: right;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-image: url("../../../2_CSS/Exercise/images/arrow.png");
+            background-size: 10px 10px;
+            transition: all .3s;
         }
 
         .btn-select:focus {
@@ -52,10 +56,14 @@
             box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
             border-radius: 10px;
         }
-
+        
         .btn-select.on {
-            background: url("images/icon-Triangle-up.png") right 13px center no-repeat;
+            border-color: #9B51E0;
+            box-shadow: 0 0 0 3px #F8E4FF;
+        }
 
+        .btn-select.on::after {
+            transform: rotate(180deg);
         }
 
         .btn-select.on+.list-member {
