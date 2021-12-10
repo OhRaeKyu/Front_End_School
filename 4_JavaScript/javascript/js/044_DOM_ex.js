@@ -30,11 +30,11 @@ selectBtn.addEventListener("click", function() {
 
 selectList.addEventListener("click", function(event) {
     if (event.target.tagName === "BUTTON") {
-        selectBtn.classList.remove("on");
         selectBtn.textContent = event.target.innerText;
+        selectBtn.classList.remove("on");
     }
     
     // 좋지 않은 코드 : js에서 스타일을 건드는 것은 좋지 않다.
     // selectList.style.display = "none";
     // toggle = false;
-})
+});
