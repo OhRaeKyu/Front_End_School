@@ -18,7 +18,6 @@ describe("클릭 이벤트 처리 및 뷰를 담당하는 함수입니다.", () 
 
         // 인자가 전달되는지 확인하는 함수
         const actual = () => new ViewManager(textManager, { btnElement, viewerElement, inputText });
-
         expect(actual).toThrowError();
     })
 
