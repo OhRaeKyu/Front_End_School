@@ -17,14 +17,22 @@ x.length = 20;
 ".".repeat(9).split(".");
 Array.from("a".repeat(10));
 
-// 몸풀기 2문제
-// 문제 1번
-// 1부터 10,000까지 8이라는 숫자가 총 몇번 나오는가?
-// 8이 포함되어 있는 숫자의 갯수를 카운팅 하는 것이 아니라 8이라는 숫자를 모두 카운팅 해야 한다.
-// (※ 예를들어 8808은 3, 8888은 4로 카운팅 해야 함)
+// 몸풀기 2문제 - 1번 정답
+// 정답
+Array(100).fill(1).map((value, index)=>value+index);
 
-console.log((Array(100).fill(1).map((value, index) => value + index) + "").split(/8/g).length - 1);
+Array(100).fill(1).map((value, index)=>value+index) + ''
 
+(Array(100).fill(1).map((value, index)=>value+index) + '').split('8');
+
+(Array(100).fill(1).map((value, index)=>value+index) + '').split('8').length - 1;
+
+'1, 2, 3, 4, 8, 1, 2, 3, 4, 8, 1, 2, 3, 4, 8, 1, 2'.split(/8/g);
+
+'1, 2, 3, 4, 8, 1, 2, 3, 4, 8, 1, 2, 3, 4, 8, 1, 2'.split(/8/g).length - 1;
+
+///////////////////////////////////
+// https://codingdojang.com/scode/408?langby=javascript#answer-filter-area
 // 1차원의 점들이 주어졌을 때, 그 중 가장 거리가 짧은 것의 쌍을 출력하는 함수를 작성하시오. (단 점들의 배열은 모두 정렬되어있다고 가정한다.)
 
 // 예를들어 S={1, 3, 4, 8, 13, 17, 20} 이 주어졌다면, 결과값은 (3, 4)가 될 것이다.
@@ -89,7 +97,7 @@ let pairs = zip(s.slice(0, s.length - 1), s.slice(1))
 // 초기값, for문 안에서는 최솟값을 비교하는 용도로 사용
 // MAX_SAFE_INTEGER를 주로 사용합니다!
 // let init = Number.MAX_SAFE_INTEGER;
-// let init = Number.MIN_SAFE_INTEGER
+// let init = Number.MIN_SAFE_INTEGER;
 let init = pairs[0][1] - pairs[0][0];
 // result는 최종 결과값
 let result = [];
@@ -103,3 +111,21 @@ for (let i of pairs) {
 }
 
 console.log(result)
+
+// 몸풀기 끝 //
+
+
+
+// 목차(기본 자료구조 및 알고리즘)
+// 1. 스택과 큐
+// 2. 연결리스트(linked list)
+// 3. 정렬
+// 4. 페이지 교체 알고리즘
+// 5. 트리와 그래프
+// 6. 트리의 순회
+
+// 목차(실전 코딩테스트 풀이)
+// 1. 18년도
+// 2. 19년도
+// 3. 20년도
+// 4. 21년도
