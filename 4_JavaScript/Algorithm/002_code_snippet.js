@@ -50,7 +50,7 @@ console.log(s);
 
 // 2. 연결리스트(linked list)
 class Node {
-    constructor(data) {
+    constructor(data){
         this.data = data;
         this.next = null;
     }
@@ -58,33 +58,75 @@ class Node {
 
 class LinkedList {
     constructor() {
-        let init = new Node("init");
+        let init = new Node('init');
         this.head = init;
         this.tail = init;
 
-        this.currentNode = undefined;
-        this.dataSize = 0;
+        this.데이터수 = 0;
     }
 
-    length() {
-        return this.dataSize;
-    }
+    get fullData(){
+        // return 'hello world'
+        let 순회용현재노드 = this.head;
+        순회용현재노드 = 순회용현재노드.next;
 
-    append(data) {
-        let newNode = new Node(data);
-        this.tail.next = newNode;
-        this.tail = newNode;
-        this.dataSize += 1;
-    }
-
-    toString() {
-        console.log(this.head.data);
-        if(this.next) {
-            this.next.toString();
+        let s = ''
+        for (let i = 0; i < this.데이터수; i++) {
+            s += `${순회용현재노드.data}, `;
+            순회용현재노드 = 순회용현재노드.next;
         }
+        return JSON.parse(`[${s.slice(0, -2)}]`)
+    }
+
+    length(){
+        return this.데이터수;
+    }
+
+    append(data){
+        let 새로운노드 = new Node(data);
+        // 마지막 값(null)은 새로운 노드가 됨
+        this.tail.next = 새로운노드;
+        // 마지막 노드는 새로운 노드가 됨
+        this.tail = 새로운노드;
+        this.데이터수 += 1;
+    }
+
+    toString(){
+        // return 'hello world';
+        let 순회용현재노드 = this.head;
+        순회용현재노드 = 순회용현재노드.next;
+
+        let s = '';
+        for (let i = 0; i < this.데이터수; i++) {
+            s += `${순회용현재노드.data},`
+            순회용현재노드 = 순회용현재노드.next;
+        }
+        return s.slice(0, -1);
+    }
+
+    insert(index, data){
+        let 순회용현재노드 = this.head;
+        순회용현재노드 = 순회용현재노드.next;
+
+        for (let i = 0; i < index - 1; i++) {
+            순회용현재노드 = 순회용현재노드.next;
+        }
+
+        let 새로운노드 = new Node(data);
+        새로운노드.next = 순회용현재노드.next;
+        순회용현재노드.next = 새로운노드;
+        this.데이터수 += 1;
     }
 }
+
+l = new LinkedList();
+
 // 3. 정렬
+// 3-1. 선택 정렬
+// 3-2. 삽입 정렬
+// 3-3. 병합 정렬
+// 3-4. 퀵 정렬
+
 // 4. 페이지 교체 알고리즘
 // 5. 트리와 그래프
 // 6. 트리의 순회
