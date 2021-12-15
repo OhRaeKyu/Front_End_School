@@ -153,6 +153,30 @@ let s = [10, 5, 7, 9, 2];
 console.log(selectionSort(arr));
 
 // 3-2. 삽입 정렬
+function insertIndex(sorted_arr, value) {
+    //삽입될 위치를 찾는 함수
+    for(let i in sorted_arr){
+        if(value < sorted_arr[i]){
+            return i;
+        }
+    }
+    return sorted_arr.length;
+}
+
+function insertSort(arr) {
+    let sorted_arr = [];
+
+    while (arr.length != 0){
+        let value = arr.shift();
+        //삽입될 위치를 반환함
+        let index = insertIndex(sorted_arr, value);
+        //삽입될 위치에 값을 반환
+        sorted_arr.splice(index, 0, value);
+    }
+    return sorted_arr;
+}
+const arr = [199, 22, 33, 12, 32, 64, 72, 222, 233];
+console.log(insertSort(arr));
 // 3-3. 병합 정렬
 function mergeSort(arr) {
     let arrSize = arr.length;
