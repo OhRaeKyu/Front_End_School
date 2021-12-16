@@ -368,12 +368,87 @@ console.log(병합정렬(입력값));
 
 // 4. 페이지 교체 알고리즘
 // 5. 트리와 그래프
+class newNode {
+    constructor(data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+class Tree {
+    constructor(data) {
+        let init = new newNode(data);
+        this.root = init;
+        this.treeSize = 0;
+    }
+
+    length(){
+        return this.treeSize;
+    }
+
+    insert(insertData){
+        let insertNode = new newNode(insertData);
+        let currentNode = this.root;
+
+        while(currentNode){
+            if (insertData < currentNode.data){
+                // 들어온 데이터가 현재노드의 데이터보다 작으면 left
+                // 현재노드의 left가 비어있으면 데이터를 넣고, 비어있지 않으면 타고 또 내려간다.
+                if (!currentNode.left){
+                    currentNode.left = insertNode;
+                    return;
+                }
+                currentNode = currentNode.left;
+            }
+            else if (insertData > currentNode.data){
+                // 들어온 데이터가 현재노드의 데이터보다 크면 right
+                // 현재노드의 right가 비어있으면 데이터를 넣고, 비어있지 않으면 타고 또 내려간다.
+                if (!currentNode.right){
+                    currentNode.right = insertNode;
+                    return;
+                }
+                currentNode = currentNode.right;
+            }
+            else {
+                // 중복된 값은 삽입하지 않는다.
+                return;
+            }
+        }
+        this.treeSize += 1;
+    }
+}
+let t = new Tree(5);
+t.insert(3);
+t.insert(8);
+t.insert(1);
+t.insert(4);
+t.insert(6);
+t.insert(9);
+
 // 6. 트리의 순회
+// 6-1. DFS
+// 6-2. BFS
+function BFS(tree) {
+    let searchQueue = [];
+    let result = [];
 
+    if (tree.length() <= 1) {
+        return tree.data;
+    }
 
+    let currentNode = tree.root;
+    searchQueue.push(currentNode);
 
-// 목차(실전 코딩테스트 풀이)
-// 1. 18년도
-// 2. 19년도
-// 3. 20년도
-// 4. 21년도
+    while(searchQueue){
+        currentNode = searchQueue.shift();
+        if (currentNode.left){
+            searchQueue.push(currentNode.left);
+        }
+        if (currentNode.right){
+            searchQueue.push(currentNode.right);
+        }
+        result.push(currentNode);
+    }
+    return result;
+}
