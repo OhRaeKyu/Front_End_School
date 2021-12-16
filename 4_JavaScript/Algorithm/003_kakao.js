@@ -22,7 +22,6 @@ function solution(dartResult) {
     let j = 0;
     for (let i = 0; i < dartResult.length; i++) {
         if (dartResult[i] >= 0 && dartResult[i] <= 9) {
-            console.log("숫자가 10인가 ? : " + (dartResult[i] == 1 && dartResult[i+1] == 0))
             if (dartResult[i] == 1 && dartResult[i+1] == 0) {
                 numArray[j] = 10;
                 i++;
@@ -50,48 +49,10 @@ function solution(dartResult) {
                 numArray[j-1] = -(numArray[j-1]);
             }
         }
-        console.log(numArray);
     }
     numArray.forEach(x => answer += x);
     return answer;
 }
-console.log(solution("1D2S#10S"));
-
-    for (let i = 0; i < dartResult.length; i++) {
-        // console.log(dartResult[i]);
-        if (dartResult[i] >= 0 && dartResult[i] <=9 ) {
-            if (dartResult[i] == 1 && dartResult[i+1] == 0) {
-                temp = 10;
-                i++;
-            } else {
-                temp = parseInt(dartResult[i]);
-            }
-        } else if (dartResult[i] == 'S'){
-            answer.push(temp);
-        } else if (dartResult[i] == 'D'){
-            // answer.push(Math.pow(temp, 2));
-            answer.push(temp**2);
-        } else if (dartResult[i] == 'T'){
-            // answer.push(Math.pow(temp, 3));
-            answer.push(temp**3);
-        } else if (dartResult[i] == '*'){
-            answer[answer.length-1] *= 2;
-            answer[answer.length-2] *= 2;
-        } else if (dartResult[i] == '#'){
-            answer[answer.length-1] *= -1;
-        }
-    }
-    for (let i = 0; i < answer.length; i++) {
-        result += answer[i];
-    }
-    return result;
-}
-// 1S2D*3T // 37
-// 1D2S#10S // 9
-
-
-// 1D2S0T // 3
-// 1S*2T*3S  // 23
 
 // 1-3. 캐시
 // https://programmers.co.kr/learn/courses/30/lessons/17680?language=javascript
@@ -117,6 +78,36 @@ function solution(cacheSize, cities) {
     }
     return answer;
 }
+
+// 1-4. 실패율
+// https://programmers.co.kr/learn/courses/30/lessons/42889
+// 전체 스테이지의 개수 N
+// 게임을 이용하는 사용자가 현재 멈춰있는 스테이지의 번호가 담긴 배열 stages
+// 실패율이 높은 스테이지부터 내림차순으로 스테이지의 번호가 담겨있는 배열을 return 하도록 solution 함수를 완성하라.
+// 실패율 : 스테이지에 도달했으나 아직 클리어하지 못한 플레이어의 수 / 스테이지에 도달한 플레이어 수
+function solution(N, stages) {
+    let answer = [];
+    let failCount = [];
+    let reachCount = [];
+    let userSize = stages.length;
+    // for (let i = 0; i < userSize; i++) {
+
+    // }
+    for (value of stages) {
+        if (value <= N){
+            for (let i = 0; i < value; i++) {
+                reachCount[i] += 1;
+            }
+            failCount[value - 1] += 1;
+        }
+        else {
+            continue;
+        }
+    }
+    return answer;
+}
+
+// N : 5 stages : [2, 1, 2, 6, 2, 4, 3, 3]
 // 2. 19년도
 // 3. 20년도
 // 4. 21년도
