@@ -62,7 +62,7 @@ function solution(dartResult) {
 // LRU 알고리즘, 페이지 교체 알고리즘
 function solution(cacheSize, cities) {
     let answer = 0;
-    let cache = new Array(cacheSize);
+    let cache = [];
     for (let i = 0; i < cities.length; i++) {
         let city = cities[i].toLowerCase();
         let hitIndex = cache.indexOf(city)
@@ -72,11 +72,11 @@ function solution(cacheSize, cities) {
             answer += 1;
         }
         else {
-            if (cache.length >= cacheSize) {
+            answer += 5;
+            cache.push(city);
+            if (cache.length > cacheSize) {
                 cache.shift();
             }
-            cache.push(city);
-            answer += 5;
         }
     }
     return answer;
