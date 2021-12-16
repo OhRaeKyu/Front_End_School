@@ -17,17 +17,18 @@ function solution(n, arr1, arr2) {
 // https://programmers.co.kr/learn/courses/30/lessons/17682?language=javascript
 // 문자열 parsing
 function solution(dartResult) {
-    dartResult = "1S2D*3T";
     let answer = 0;
     let numArray = [];
     let j = 0;
-    for (i in dartResult) {
+    for (let i = 0; i < dartResult.length; i++) {
         if (dartResult[i] >= 0 && dartResult[i] <= 9) {
-            if (dartResult[i] === 1 && dartResult[i+1] === 0) {
+            console.log("숫자가 10인가 ? : " + (dartResult[i] == 1 && dartResult[i+1] == 0))
+            if (dartResult[i] == 1 && dartResult[i+1] == 0) {
                 numArray[j] = 10;
+                i++;
             }
             else {
-                numArray[j] = dartResult[i];
+                numArray[j] = parseInt(dartResult[i]);
             }
             j++;
         }
@@ -43,17 +44,52 @@ function solution(dartResult) {
             }
             else if (dartResult[i] === "*") {
                 numArray[j-1] *= 2;
+                numArray[j-2] *= 2;
             }
             else {
                 numArray[j-1] = -(numArray[j-1]);
             }
         }
+        console.log(numArray);
     }
+    numArray.forEach(x => answer += x);
     return answer;
 }
+console.log(solution("1D2S#10S"));
 
+    for (let i = 0; i < dartResult.length; i++) {
+        // console.log(dartResult[i]);
+        if (dartResult[i] >= 0 && dartResult[i] <=9 ) {
+            if (dartResult[i] == 1 && dartResult[i+1] == 0) {
+                temp = 10;
+                i++;
+            } else {
+                temp = parseInt(dartResult[i]);
+            }
+        } else if (dartResult[i] == 'S'){
+            answer.push(temp);
+        } else if (dartResult[i] == 'D'){
+            // answer.push(Math.pow(temp, 2));
+            answer.push(temp**2);
+        } else if (dartResult[i] == 'T'){
+            // answer.push(Math.pow(temp, 3));
+            answer.push(temp**3);
+        } else if (dartResult[i] == '*'){
+            answer[answer.length-1] *= 2;
+            answer[answer.length-2] *= 2;
+        } else if (dartResult[i] == '#'){
+            answer[answer.length-1] *= -1;
+        }
+    }
+    for (let i = 0; i < answer.length; i++) {
+        result += answer[i];
+    }
+    return result;
+}
 // 1S2D*3T // 37
 // 1D2S#10S // 9
+
+
 // 1D2S0T // 3
 // 1S*2T*3S  // 23
 
