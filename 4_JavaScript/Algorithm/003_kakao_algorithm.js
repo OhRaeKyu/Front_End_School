@@ -79,59 +79,14 @@ function solution(cacheSize, cities) {
     return answer;
 }
 
-// 1-4. 실패율
+// 2. 19년도
+// 2-1. 실패율
 // https://programmers.co.kr/learn/courses/30/lessons/42889
 // 전체 스테이지의 개수 N
 // 게임을 이용하는 사용자가 현재 멈춰있는 스테이지의 번호가 담긴 배열 stages
 // 실패율이 높은 스테이지부터 내림차순으로 스테이지의 번호가 담겨있는 배열을 return 하도록 solution 함수를 완성하라.
 // 실패율 : 스테이지에 도달했으나 아직 클리어하지 못한 플레이어의 수 / 스테이지에 도달한 플레이어 수
-// function solution(N, stages) {
-//     N = 5;
-//     stages = [2, 1, 2, 6, 2, 4, 3, 3];
-//     let answer = [];
-//     let failCount = new Array(N);
-//     failCount.fill(0);
-//     let reachCount = new Array(N);
-//     reachCount.fill(0);
-//     let failRate = new Array(N);
-//     let failRateSort = new Array(N);
-
-//     let userSize = stages.length;
-//     console.log(typeof userSize + ":" + userSize);
-//     for (value of stages) {
-//         if (value <= N){
-//             for (let i = 0; i < value; i++) {
-//                 reachCount[i] += 1;
-//             }
-//             failCount[value - 1] += 1;
-//         }
-//         else {
-//             reachCount[N-1] += 1;
-//             failCount[value - 2] += 1;
-//             continue;
-//         }
-//     }
-
-//     for (let i = 0; i < N; i++) {
-//         failRate[i] = failCount[i]/reachCount[i]
-//     }
-
-//     failRateSort = failRate;
-//     failRateSort.sort((a, b) => b - a);
-    
-//     for (let i = 0; i < N; i++) {
-//         answer.push(failRate.indexOf(failRateSort[i]));
-//     }
-
-//     console.log(failCount);
-//     console.log(reachCount);
-
-//     return answer;
-// }
-
 function solution(N, stages) {
-    N = 5;
-    stages = [2, 1, 2, 6, 2, 4, 3, 3];
     let answer = [];
     let result = [];
 
@@ -150,11 +105,31 @@ function solution(N, stages) {
         }
         result[i-1] = {idx: i, rate: failRate};
     }
+
     result.sort((a, b) => b.rate - a.rate).forEach(x => answer.push(x.idx));
     return answer;
 }
 
-// N : 5 stages : [2, 1, 2, 6, 2, 4, 3, 3]
-// 2. 19년도
 // 3. 20년도
 // 4. 21년도
+// 4-1. 신규 아이디 추천
+// https://programmers.co.kr/learn/courses/30/lessons/72410
+function solution(new_id) {
+    new_id = "...!@BaT#*..y.abcdefghijklm";
+    let answer = "";
+    let recommend = "";
+    recommend = new_id.toLowerCase().split("");
+    console.log(recommend);
+    for (let i = 0; i < recommend.length; i++){
+        if (recommend[i] === "." || recommend[i] === "-" || recommend[i] === "_") {
+            if (i === 0 || i === recommend.length) {
+                recommend.splice(i, 1);
+            }
+            if (recommend[i+1] === ".") {
+                recommend.splice(i, 2, ".");
+            }
+        }
+        else if ()
+    }
+    return answer;
+}
