@@ -1,0 +1,68 @@
+$second-font: #767676;
+/* Screen Reader Only */
+.blind {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+/* Reset CSS */
+button {
+    margin: 0;
+    padding: 0;
+    background-color: inherit;
+    border: none;
+}
+
+/* Style */
+/* sticky header css 아래 참고 */
+/* https://velog.io/@nooroong/%EC%8A%A4%ED%81%AC%EB%A1%A4%EC%97%90-%EB%B0%98%EC%9D%91%ED%95%98%EB%8A%94-sticky-header-%EB%A7%8C%EB%93%A4%EA%B8%B0 */
+.profile-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    padding: 0 12px 0 16px;
+    border-bottom: 0.5px solid #DBDBDB;
+}
+
+.back-btn {
+    width: 22px;
+    height: 22px;
+}
+
+.moremenu-btn {
+    width: 24px;
+    height: 24px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 0;
+}
+
+.info-head {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.info-head div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow-num {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.follow-type {
+    font-size: 10px;
+}
