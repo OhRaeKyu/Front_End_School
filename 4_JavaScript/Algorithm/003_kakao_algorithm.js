@@ -119,17 +119,28 @@ function solution(new_id) {
     let answer = "";
     let recommend = "";
     recommend = new_id.toLowerCase().split("");
-    console.log(recommend);
+    console.log("debug 1 :" + recommend);
     for (let i = 0; i < recommend.length; i++){
         if (recommend[i] === "." || recommend[i] === "-" || recommend[i] === "_") {
             if (i === 0 || i === recommend.length) {
                 recommend.splice(i, 1);
+                console.log("debug 2 :" + recommend);
             }
             if (recommend[i+1] === ".") {
                 recommend.splice(i, 2, ".");
+                console.log("debug 3 :" + recommend);
             }
         }
-        else if ()
+        else{
+            if ((recommend[i] >= 0 && recommend[i] <= 9) || (recommend[i] >= "a" && recommend[i] <= "z")) {
+                console.log("debug 4 :" + recommend);
+                continue;
+            }
+            else {
+                recommend.splice(i, 1);
+                console.log("debug 5 :" + recommend);
+            }
+        }
     }
     return answer;
 }
