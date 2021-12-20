@@ -69,7 +69,7 @@ button {
     align-items: center;
 }
 
-.info-head .follow-num {
+.info-head .follow-count {
     font-size: 18px;
     font-weight: 700;
 }
@@ -146,7 +146,7 @@ button {
 
 /* sale info style */
 .profile-main .sale-info {
-    padding: 20px;
+    padding: 20px 20px 15px;
     border-bottom: 0.5px solid var(--gray-border);
 }
 
@@ -156,10 +156,12 @@ button {
     font-weight: 700;
 }
 
-/* #### 오버플로우, 말줄임 처리해야함 ####*/
+/* #### 말줄임 처리해야함 ####*/
 .sale-info .sale-list {
     display: flex;
-    flex-wrap: nowrap;
+    overflow: auto;
+    white-space: nowrap;
+    padding-bottom: 5px;
 }
 
 .sale-info .sale-list li + li{
@@ -207,26 +209,39 @@ button {
     padding: 16px;
 }
 
+/* posting type - list */
+.post-main .post-list {
+    /* display: none; */
+}
+
 .post-main .post-list li + li{
     margin-top: 16px
 }
 
 .post-list .post {
     display: flex;
-    position: static;
+    flex-direction: column;
 }
 
-.post-list .post::after {
-    position: absolute;
-    content: "";
-    right: 16px;
-    background-image: url("./img/more-menu-md.png");
-    background-size: 18px 18px;
-    width: 18px;
-    height: 18px;
+.post .content-head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
 }
 
-.post-list .post .user-image {
+.post .content-head .user-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.post .content-head .user-id {
+    font-size: 12px;
+    color: var(--gray-font);
+}
+
+.post .content-head .user-image {
     box-sizing: border-box;
     width: 42px;
     height: 42px;
@@ -235,3 +250,53 @@ button {
     border-radius: 50%;
 }
 
+.post .content-head .moremenu-btn {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}
+
+.post .content-main {
+    margin-left: 54px;
+}
+
+.post .content-main .post-content {
+    font-size: 14px;
+}
+
+.post .content-main .post-image{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 16px 0;
+    border: 0.5px solid var(--gray-border);
+    border-radius: 10px;
+}
+
+.post .content-main .post-response {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.post .content-main .post-response button {
+    margin-right: 8.5px;
+}
+
+.post .content-main .post-response .heart-count {
+    margin-right: 18.5px;
+}
+
+/* posting type - album */
+.post-main .post-album {
+    display: none;
+    /* display: grid; */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+}
+
+.post-main .post-album img{
+    background-color: orange;
+    width: 100%;
+    height: 100%;
+}
