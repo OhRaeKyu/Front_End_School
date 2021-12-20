@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
+    <title></title>
+    <style>
+        body {
+            margin: 100px;
+        }
+
+        .target {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            transition: all .1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="target"></div>
+    <script>
+        const target = document.querySelector(".target");
+        let pos = 0;
+        let keys = {};
+
+        document.addEventListener("keydown", move);
+        document.addEventListener("keyup", stop);
+
+        function move() {
+            keys[event.key] = true;
+        }
+
+        function stop() {
+            keys[event.key] = false;
+        }
+
+        function play() {
+            if (keys.ArrowLeft === true) {
+                pos -= 20;
+                target.style.transform = `translateX(${pos}px)`;
+            } else if (keys.ArrowRight === true) {
+                pos += 20;
+                target.style.transform = `translateX(${pos}px)`;
+            }
+            window.requestAnimationFrame(play);
+        }
+
+        window.requestAnimationFrame(play);
+    </script>
+</body>
+</html>

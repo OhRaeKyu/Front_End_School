@@ -1,4 +1,10 @@
-$second-font: #767676;
+/* #767676 */
+:root {
+    --gray-font: #767676;
+    --gray-border: #DBDBDB;
+    --orange: #F26E22;
+}
+
 /* Screen Reader Only */
 .blind {
 	position: absolute;
@@ -20,33 +26,39 @@ button {
 /* Style */
 /* sticky header css 아래 참고 */
 /* https://velog.io/@nooroong/%EC%8A%A4%ED%81%AC%EB%A1%A4%EC%97%90-%EB%B0%98%EC%9D%91%ED%95%98%EB%8A%94-sticky-header-%EB%A7%8C%EB%93%A4%EA%B8%B0 */
+/* profile head style */
 .profile-head {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 48px;
     padding: 0 12px 0 16px;
-    border-bottom: 0.5px solid #DBDBDB;
+    border-bottom: 0.5px solid var(--gray-border);
 }
 
-.back-btn {
+.profile-head .back-btn {
     width: 22px;
     height: 22px;
 }
 
-.moremenu-btn {
+.profile-head .moremenu-btn {
     width: 24px;
     height: 24px;
 }
 
-.profile-info {
+/* profile main style */
+.profile-main {
+    border-bottom: 0.5px solid var(--gray-border);
+    padding: 30px 0 26px
+}
+
+.profile-main .profile-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 0 0;
 }
 
-.info-head {
+.profile-info .info-head {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -58,11 +70,69 @@ button {
     align-items: center;
 }
 
-.follow-num {
+.info-head .follow-num {
     font-size: 18px;
     font-weight: 700;
 }
 
-.follow-type {
+.info-head .follow-type {
     font-size: 10px;
+    color: var(--gray-font);
+}
+
+.profile-info .info-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px 0 32px
+}
+
+.info-main .user-name {
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.info-main .user-id {
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: var(--gray-font);
+}
+
+.info-main .user-intro {
+    font-size: 14px;
+    color: var(--gray-font);
+}
+
+.profile-info .info-foot {
+    display: flex;
+    align-items: center;
+}
+
+.info-foot .circle-btn {
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--gray-border);
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.info-foot .follow-btn {
+    box-sizing: border-box;
+    width: 120px;
+    height: 34px;
+    margin: 0 10px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--orange);
+    color: #FFFFFF;
+}
+
+.info-foot .follow-btn + .unfollow-btn {
+    display: none;
+    background-color: #FFFFFF;
+    color: var(--gray-font);
+    border: 1px solid var(--gray-border);
 }
