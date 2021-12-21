@@ -1,6 +1,4 @@
-/* #767676 */
 :root {
-    --gray-font: #767676;
     --gray-border: #DBDBDB;
     --orange: #F26E22;
 }
@@ -76,11 +74,10 @@ button {
 
 .info-head .follow-type {
     font-size: 10px;
-    color: var(--gray-font);
+    color: var(--bg-color-8);
 }
 
 .info-head .user-image {
-    box-sizing: border-box;
     width: 110px;
     height: 110px;
     border: 1px solid var(--gray-border);
@@ -103,12 +100,12 @@ button {
 .info-main .user-id {
     margin-bottom: 16px;
     font-size: 12px;
-    color: var(--gray-font);
+    color: var(--bg-color-8);
 }
 
 .info-main .user-intro {
     font-size: 14px;
-    color: var(--gray-font);
+    color: var(--bg-color-8);
 }
 
 .profile-info .info-foot {
@@ -117,7 +114,6 @@ button {
 }
 
 .info-foot .circle-btn {
-    box-sizing: border-box;
     width: 34px;
     height: 34px;
     border: 1px solid var(--gray-border);
@@ -126,21 +122,12 @@ button {
 }
 
 .info-foot .follow-btn {
-    box-sizing: border-box;
-    width: 120px;
-    height: 34px;
     margin: 0 10px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 500;
-    background-color: var(--orange);
-    color: #FFFFFF;
 }
 
 .info-foot .unfollow-btn {
     display: none;
-    background-color: #FFFFFF;
-    color: var(--gray-font);
+    margin: 0 10px;
     border: 1px solid var(--gray-border);
 }
 
@@ -157,11 +144,19 @@ button {
 }
 
 /* #### 말줄임 처리해야함 ####*/
+.sale-info {
+    /* display: none; */
+}
+
 .sale-info .sale-list {
     display: flex;
     overflow: auto;
     white-space: nowrap;
     padding-bottom: 5px;
+}
+
+.sale-info .sale-list::-webkit-scrollbar {
+    display: none;
 }
 
 .sale-info .sale-list li + li{
@@ -173,7 +168,6 @@ button {
 }
 
 .sale-list .sale-product .product-image{
-    box-sizing: border-box;
     width: 140px;
     height: 90px;
     margin-bottom: 6px;
@@ -189,10 +183,14 @@ button {
 .sale-list .sale-product .product-price{
     font-size: 12px;
     font-weight: 700;
-    color: var(--orange);
+    color: var(--bg-color-3);
 }
 
 /* post info style */
+.post-info {
+    /* display: none; */
+}
+
 .post-info .post-head {
     display: flex;
     justify-content: end;
@@ -238,11 +236,10 @@ button {
 
 .post .content-head .user-id {
     font-size: 12px;
-    color: var(--gray-font);
+    color: var(--bg-color-8);
 }
 
 .post .content-head .user-image {
-    box-sizing: border-box;
     width: 42px;
     height: 42px;
     margin-right: 12px;
@@ -265,7 +262,6 @@ button {
 }
 
 .post .content-main .post-image{
-    box-sizing: border-box;
     width: 100%;
     margin: 16px 0;
     border: 0.5px solid var(--gray-border);
@@ -282,9 +278,20 @@ button {
     margin-right: 8.5px;
 }
 
+.post .content-main .post-response p {
+    font-size: 12px;
+    color: var(--bg-color-8);
+}
+
 .post .content-main .post-response .heart-count {
     margin-right: 18.5px;
 }
+.post .content-main .post-date {
+    font-size: 10px;
+    color: var(--bg-color-8);
+}
+
+
 
 /* posting type - album */
 .post-main .post-album {
