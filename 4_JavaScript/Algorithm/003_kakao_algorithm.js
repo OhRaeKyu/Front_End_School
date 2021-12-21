@@ -115,32 +115,13 @@ function solution(N, stages) {
 // 4-1. 신규 아이디 추천
 // https://programmers.co.kr/learn/courses/30/lessons/72410
 function solution(new_id) {
-    new_id = "...!@BaT#*..y.abcdefghijklm";
-    let answer = "";
-    let recommend = "";
-    recommend = new_id.toLowerCase().split("");
-    console.log("debug 1 :" + recommend);
-    for (let i = 0; i < recommend.length; i++){
-        if (recommend[i] === "." || recommend[i] === "-" || recommend[i] === "_") {
-            if (i === 0 || i === recommend.length) {
-                recommend.splice(i, 1);
-                console.log("debug 2 :" + recommend);
-            }
-            if (recommend[i+1] === ".") {
-                recommend.splice(i, 2, ".");
-                console.log("debug 3 :" + recommend);
-            }
-        }
-        else{
-            if ((recommend[i] >= 0 && recommend[i] <= 9) || (recommend[i] >= "a" && recommend[i] <= "z")) {
-                console.log("debug 4 :" + recommend);
-                continue;
-            }
-            else {
-                recommend.splice(i, 1);
-                console.log("debug 5 :" + recommend);
-            }
-        }
-    }
-    return answer;
+    const recommend = new_id.toLowerCase()
+        .replace(/[^a-z0-9-_.]/g, "")
+        .replace(/\.+/g, ".")
+        .replace(/^\.|\.$/g, "")
+        .replace(/^$/, "a")
+        .slice(0, 15).replace(/\.$/g, "");
+
+    const len = recommend.length
+    return len <= 2 ? recommend + recommend[len - 1].repeat(3 - len) : recommend;
 }
