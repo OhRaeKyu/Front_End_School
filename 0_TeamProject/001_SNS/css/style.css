@@ -25,6 +25,7 @@ button {
 /* sticky header css 아래 참고 */
 /* https://velog.io/@nooroong/%EC%8A%A4%ED%81%AC%EB%A1%A4%EC%97%90-%EB%B0%98%EC%9D%91%ED%95%98%EB%8A%94-sticky-header-%EB%A7%8C%EB%93%A4%EA%B8%B0 */
 
+/* your_profile.html Style */
 /* profile head */
 .profile-head {
     display: flex;
@@ -68,6 +69,7 @@ button {
 }
 
 .info-head .follow-count {
+    color: black;
     font-size: 18px;
     font-weight: 700;
 }
@@ -193,7 +195,7 @@ button {
 
 .post-info .post-head {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     height: 44px;
     border-bottom: 0.5px solid var(--gray-border);
@@ -306,4 +308,14 @@ button {
     background-color: orange;
     width: 100%;
     height: 100%;
+}
+
+/* your_profile.html Style */
+.profile-info .info-foot .modify-profile,
+.profile-info .info-foot .register-product {
+    border: 1px solid var(--gray-border);
+}
+
+.profile-info .info-foot .modify-profile + .register-product{
+    margin-left: 10px;
 }
