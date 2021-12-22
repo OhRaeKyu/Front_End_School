@@ -111,16 +111,17 @@ function solution(N, stages) {
 }
 
 // 3. 20년도
+
 // 4. 21년도
 // 4-1. 신규 아이디 추천
 // https://programmers.co.kr/learn/courses/30/lessons/72410
 function solution(new_id) {
-    const recommend = new_id.toLowerCase()
-        .replace(/[^a-z0-9-_.]/g, "")
-        .replace(/\.+/g, ".")
-        .replace(/^\.|\.$/g, "")
-        .replace(/^$/, "a")
-        .slice(0, 15).replace(/\.$/g, "");
+    const recommend = new_id.toLowerCase()  // 소문자 변환
+        .replace(/[^a-z0-9-_.]/g, "")   // 영문 소문자, 숫자, "-", "_", "."를 제외한 것을 제거
+        .replace(/\.+/g, ".")   // "."이 여러개 연속으로 있는 것을 "." 하나로 대체
+        .replace(/^\.|\.$/g, "")    // "."로 시작하거나 끝나는 것을 제거
+        .replace(/^$/, "a") // 문자열이 존재하지 않을 때 "a"로 대체
+        .slice(0, 15).replace(/\.$/g, "");  // 길이를 최대 15개로 제한하기 위해 slice하고 "."로 끝나는 것을 제거
 
     const len = recommend.length
     return len <= 2 ? recommend + recommend[len - 1].repeat(3 - len) : recommend;
