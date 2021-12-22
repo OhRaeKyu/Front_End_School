@@ -1,4 +1,4 @@
-$("box2").hover(function() {
+$("#box2").hover(function() {
     $(this).css("background-color", "yellow");
 }, function() {
     $(this).css("background-color", "blue");

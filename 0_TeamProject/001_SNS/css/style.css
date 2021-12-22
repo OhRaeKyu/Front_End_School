@@ -293,8 +293,6 @@ button {
     color: var(--bg-color-8);
 }
 
-
-
 /* posting type - album */
 .post-main .post-album {
     display: none;
