@@ -1,0 +1,31 @@
+/* splashscreen.html */
+/* 애니메이션 추가 */
+@keyframes loading {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.landing .logo {
+    display: block;
+    width: 200px;
+    height: 200px;
+    animation: loading .5s infinite alternate;
+}
+
+/* login_email.html */
+/* 클래스 배치 수정 */
+.module-inp .inp-error {
+    margin-top: 6px;
+    display: none;
+    color: #eb5757;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  
+  .module-inp .inp-error.error{
+    display: block;
+  }
