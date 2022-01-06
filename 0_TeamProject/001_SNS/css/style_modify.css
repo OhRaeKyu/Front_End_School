@@ -24,8 +24,8 @@
     color: #eb5757;
     font-size: 12px;
     line-height: 14px;
-  }
+}
   
-  .module-inp .inp-error.error{
+.module-inp .inp-error.error{
     display: block;
-  }
+}
