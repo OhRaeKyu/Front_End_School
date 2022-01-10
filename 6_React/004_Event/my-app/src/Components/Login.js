@@ -28,7 +28,7 @@ function Login() {
                     비밀번호 : 
                     <input type="password" placeholder="비밀번호를 입력세요." onChange={pwInput}></input>
                 </label>
-                <button type="submit" onClick={LoginSubmit}>로그인</button>
+                <button type="submit" onSubmit={LoginSubmit}>로그인</button>
             </form>
         </div>
     );
