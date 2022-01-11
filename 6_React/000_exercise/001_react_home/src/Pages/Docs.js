@@ -1,11 +1,11 @@
 import React from "react";
 
-function Study() {
+function Docs() {
     return (
         <div>
-            Study 영역
+            Docs 영역
         </div>
     )
 }
 
-export default Study;
+export default Docs;

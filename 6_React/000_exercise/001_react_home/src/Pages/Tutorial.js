@@ -1,11 +1,11 @@
 import React from "react";
 
-function Document() {
+function Tutorial() {
     return (
         <div>
-            Document 영역
+            Tutorial 영역
         </div>
     )
 }
 
-export default Document;
+export default Tutorial;

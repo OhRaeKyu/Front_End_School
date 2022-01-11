@@ -1,4 +1,10 @@
-div, header, main, ul, li {
+@charset "utf-8";
+
+div,
+header,
+main,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -8,19 +14,22 @@ a {
   color: inherit;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
 .header {
-  width: 100vw;
+  width: 100%;
+  text-align: center;
 }
 
 .header .nav {
-  display: flex;
-  justify-content: space-around;
-  width: 500px;
-  margin: 0 auto;
+  margin: 20px 0;
+}
+
+.header .nav a + a {
+  margin-left: 10px;
 }
 
 .main {
